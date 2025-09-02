@@ -1,0 +1,37 @@
+{
+  "name": "emmanuel-ethiopian-tours",
+  "version": "1.0.0",
+  "description": "Emmanuel Ethiopian Tours is a tour and travel company based in Ethiopia that provides custom travel experiences.",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss -i ./css/tailwind.css -o ./public/main.css --minify",
+    "watch:css": "tailwindcss -i ./css/tailwind.css -o ./public/main.css --watch",
+    "copy:files": "cp index.html public/ && cp -r pages public/ && cp -r css public/",
+    "build": "npm run build:css && node scripts/build.js",
+    "dev": "npm-run-all --parallel watch:css serve",
+    "serve": "live-server --port=8080",
+    "preview": "npm run build && live-server public --port=8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henmog/emmanuel_ethiopian_tours.git"
+  },
+  "keywords": [
+    "ethiopia",
+    "tours",
+    "travel"
+  ],
+  "author": "Henok Moges",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/henmog/emmanuel_ethiopian_tours/issues"
+  },
+  "homepage": "https://github.com/henmog/emmanuel_ethiopian_tours#readme",
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5",
+    "tailwindcss": "^3.4.3",
+    "tailwindcss-animate": "^1.0.7"
+  }
+}

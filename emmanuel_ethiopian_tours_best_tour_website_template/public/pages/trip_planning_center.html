@@ -1,0 +1,1951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trip Planning Center - Emmanuel Ethiopia Tour & Travel</title>
+    <meta name="description" content="Plan your perfect Ethiopian journey with our interactive tools. Get personalized itineraries, cost estimates, visa assistance, and comprehensive travel preparation guides." />
+    <link rel="stylesheet" href="../css/main.css" />
+</head>
+<body class="bg-background text-text-primary">
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-primary/10">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="h-10 w-10 text-primary" viewBox="0 0 40 40" fill="currentColor">
+                        <path d="M20 2L25 12H35L27 18L30 28L20 22L10 28L13 18L5 12H15L20 2Z"/>
+                        <circle cx="20" cy="20" r="3" fill="currentColor"/>
+                    </svg>
+                    <span class="ml-3 text-xl font-serif font-semibold text-primary">Emmanuel Ethiopia Tour & Travel</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary transition-gentle">Home</a>
+                    <a href="discover_ethiopia.html" class="text-text-secondary hover:text-primary transition-gentle">Discover Ethiopia</a>
+                    <a href="experience_collections.html" class="text-text-secondary hover:text-primary transition-gentle">Experiences</a>
+                    <a href="trip_planning_center.html" class="text-primary font-medium border-b-2 border-primary">Plan Your Trip</a>
+                    <a href="about_emmanuel.html" class="text-text-secondary hover:text-primary transition-gentle">About Us</a>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="#booking-section" class="bg-primary text-white px-6 py-2 rounded-cultural hover:bg-primary-600 transition-gentle">
+                        Start Planning
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2" id="mobile-menu-btn">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-background border-t border-primary/10">
+                    <a href="homepage.html" class="block px-3 py-2 text-text-secondary hover:text-primary">Home</a>
+                    <a href="discover_ethiopia.html" class="block px-3 py-2 text-text-secondary hover:text-primary">Discover Ethiopia</a>
+                    <a href="experience_collections.html" class="block px-3 py-2 text-text-secondary hover:text-primary">Experiences</a>
+                    <a href="trip_planning_center.html" class="block px-3 py-2 text-primary font-medium">Plan Your Trip</a>
+                    <a href="about_emmanuel.html" class="block px-3 py-2 text-text-secondary hover:text-primary">About Us</a>
+                    <a href="#booking-section" class="block px-3 py-2 bg-primary text-white rounded-cultural mt-2">Start Planning</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20 pb-16 bg-gradient-to-br from-primary/5 to-accent/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-6xl font-serif font-bold text-text-primary mb-6">
+                    Plan Your Perfect Ethiopian Journey
+                </h1>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto mb-8">
+                    Use our comprehensive planning tools to create your ideal Ethiopian adventure. From itinerary building to travel preparation, we guide you every step of the way.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#itinerary-builder" class="bg-primary hover:bg-primary-600 text-white px-8 py-4 rounded-cultural text-lg font-medium transition-gentle">
+                        Build Your Itinerary
+                    </a>
+                    <a href="#travel-calculator" class="border-2 border-primary hover:bg-primary hover:text-white text-primary px-8 py-4 rounded-cultural text-lg font-medium transition-gentle">
+                        Calculate Costs
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planning Tools Navigation -->
+    <section class="py-8 bg-surface border-b border-primary/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="planning-tab active px-6 py-3 rounded-cultural bg-primary text-white font-medium" data-tab="itinerary">
+                    Itinerary Builder
+                </button>
+                <button class="planning-tab px-6 py-3 rounded-cultural bg-white text-text-primary border border-primary/20 hover:bg-primary/5 font-medium transition-gentle" data-tab="calculator">
+                    Travel Calculator
+                </button>
+                <button class="planning-tab px-6 py-3 rounded-cultural bg-white text-text-primary border border-primary/20 hover:bg-primary/5 font-medium transition-gentle" data-tab="visa">
+                    Visa Assistance
+                </button>
+                <button class="planning-tab px-6 py-3 rounded-cultural bg-white text-text-primary border border-primary/20 hover:bg-primary/5 font-medium transition-gentle" data-tab="health">
+                    Health Preparation
+                </button>
+                <button class="planning-tab px-6 py-3 rounded-cultural bg-white text-text-primary border border-primary/20 hover:bg-primary/5 font-medium transition-gentle" data-tab="packing">
+                    Packing Guide
+                </button>
+                <button class="planning-tab px-6 py-3 rounded-cultural bg-white text-text-primary border border-primary/20 hover:bg-primary/5 font-medium transition-gentle" data-tab="cultural">
+                    Cultural Prep
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Itinerary Builder Section -->
+    <section id="itinerary-builder" class="planning-content active py-16 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-text-primary mb-4">
+                    Interactive Itinerary Builder
+                </h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                    Create your personalized Ethiopian adventure by selecting your preferences. Our system will generate tailored recommendations with real-time pricing.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Builder Form -->
+                <div class="lg:col-span-2">
+                    <div class="bg-white rounded-cultural shadow-warm-lg p-8">
+                        <form id="itinerary-form" class="space-y-8">
+                            <!-- Trip Duration -->
+                            <div>
+                                <label class="block text-lg font-serif font-semibold text-text-primary mb-4">
+                                    Trip Duration
+                                </label>
+                                <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                                    <label class="duration-option cursor-pointer">
+                                        <input type="radio" name="duration" value="5-7" class="sr-only" />
+                                        <div class="p-4 border-2 border-gray-200 rounded-cultural text-center hover:border-primary transition-gentle">
+                                            <div class="font-semibold">5-7 Days</div>
+                                            <div class="text-sm text-text-secondary">Quick Explorer</div>
+                                        </div>
+                                    </label>
+                                    <label class="duration-option cursor-pointer">
+                                        <input type="radio" name="duration" value="8-12" class="sr-only" />
+                                        <div class="p-4 border-2 border-gray-200 rounded-cultural text-center hover:border-primary transition-gentle">
+                                            <div class="font-semibold">8-12 Days</div>
+                                            <div class="text-sm text-text-secondary">Classic Journey</div>
+                                        </div>
+                                    </label>
+                                    <label class="duration-option cursor-pointer">
+                                        <input type="radio" name="duration" value="13-18" class="sr-only" />
+                                        <div class="p-4 border-2 border-gray-200 rounded-cultural text-center hover:border-primary transition-gentle">
+                                            <div class="font-semibold">13-18 Days</div>
+                                            <div class="text-sm text-text-secondary">Grand Adventure</div>
+                                        </div>
+                                    </label>
+                                    <label class="duration-option cursor-pointer">
+                                        <input type="radio" name="duration" value="19+" class="sr-only" />
+                                        <div class="p-4 border-2 border-gray-200 rounded-cultural text-center hover:border-primary transition-gentle">
+                                            <div class="font-semibold">19+ Days</div>
+                                            <div class="text-sm text-text-secondary">Epic Expedition</div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Regions of Interest -->
+                            <div>
+                                <label class="block text-lg font-serif font-semibold text-text-primary mb-4">
+                                    Regions of Interest (Select multiple)
+                                </label>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <label class="region-option cursor-pointer">
+                                        <input type="checkbox" name="regions" value="northern" class="sr-only" />
+                                        <div class="p-4 border-2 border-gray-200 rounded-cultural hover:border-primary transition-gentle">
+                                            <div class="flex items-center">
+                                                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=400&auto=format&fit=crop" alt="Northern Ethiopia" class="w-16 h-16 rounded-cultural object-cover mr-4" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1271619/pexels-photo-1271619.jpeg?auto=compress&cs=tinysrgb&w=400'; this.onerror=null;" />
+                                                <div>
+                                                    <div class="font-semibold">Northern Circuit</div>
+                                                    <div class="text-sm text-text-secondary">Lalibela, Axum, Gondar</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="region-option cursor-pointer">
+                                        <input type="checkbox" name="regions" value="danakil" class="sr-only" />
+                                        <div class="p-4 border-2 border-gray-200 rounded-cultural hover:border-primary transition-gentle">
+                                            <div class="flex items-center">
+                                                <img src="https://images.pexels.com/photos/1271619/pexels-photo-1271619.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Danakil Depression" class="w-16 h-16 rounded-cultural object-cover mr-4" loading="lazy" onerror="this.src='https://images.pixabay.com/photo-2019/08/21/16/22/landscape-4422138_400.jpg'; this.onerror=null;" />
+                                                <div>
+                                                    <div class="font-semibold">Danakil Depression</div>
+                                                    <div class="text-sm text-text-secondary">Volcanoes, Salt Lakes</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="region-option cursor-pointer">
+                                        <input type="checkbox" name="regions" value="omo" class="sr-only" />
+                                        <div class="p-4 border-2 border-gray-200 rounded-cultural hover:border-primary transition-gentle">
+                                            <div class="flex items-center">
+                                                <img src="https://images.pixabay.com/photo-2019/08/21/16/22/landscape-4422138_400.jpg" alt="Omo Valley" class="w-16 h-16 rounded-cultural object-cover mr-4" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=400&auto=format&fit=crop'; this.onerror=null;" />
+                                                <div>
+                                                    <div class="font-semibold">Omo Valley</div>
+                                                    <div class="text-sm text-text-secondary">Tribal Cultures</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="region-option cursor-pointer">
+                                        <input type="checkbox" name="regions" value="bale" class="sr-only" />
+                                        <div class="p-4 border-2 border-gray-200 rounded-cultural hover:border-primary transition-gentle">
+                                            <div class="flex items-center">
+                                                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=400&auto=format&fit=crop" alt="Bale Mountains" class="w-16 h-16 rounded-cultural object-cover mr-4" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1271619/pexels-photo-1271619.jpeg?auto=compress&cs=tinysrgb&w=400'; this.onerror=null;" />
+                                                <div>
+                                                    <div class="font-semibold">Bale Mountains</div>
+                                                    <div class="text-sm text-text-secondary">Trekking, Wildlife</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Travel Style -->
+                            <div>
+                                <label class="block text-lg font-serif font-semibold text-text-primary mb-4">
+                                    Travel Style
+                                </label>
+                                <div class="grid md:grid-cols-3 gap-4">
+                                    <label class="style-option cursor-pointer">
+                                        <input type="radio" name="style" value="budget" class="sr-only" />
+                                        <div class="p-6 border-2 border-gray-200 rounded-cultural text-center hover:border-primary transition-gentle">
+                                            <svg class="h-8 w-8 text-success mx-auto mb-3" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zM14 6a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h8zM6 10a2 2 0 100 4 2 2 0 000-4z"/>
+                                            </svg>
+                                            <div class="font-semibold">Budget</div>
+                                            <div class="text-sm text-text-secondary">$80-120/day</div>
+                                        </div>
+                                    </label>
+                                    <label class="style-option cursor-pointer">
+                                        <input type="radio" name="style" value="standard" class="sr-only" />
+                                        <div class="p-6 border-2 border-gray-200 rounded-cultural text-center hover:border-primary transition-gentle">
+                                            <svg class="h-8 w-8 text-primary mx-auto mb-3" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                            </svg>
+                                            <div class="font-semibold">Standard</div>
+                                            <div class="text-sm text-text-secondary">$150-250/day</div>
+                                        </div>
+                                    </label>
+                                    <label class="style-option cursor-pointer">
+                                        <input type="radio" name="style" value="luxury" class="sr-only" />
+                                        <div class="p-6 border-2 border-gray-200 rounded-cultural text-center hover:border-primary transition-gentle">
+                                            <svg class="h-8 w-8 text-accent mx-auto mb-3" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+                                            </svg>
+                                            <div class="font-semibold">Luxury</div>
+                                            <div class="text-sm text-text-secondary">$300-500/day</div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Interests -->
+                            <div>
+                                <label class="block text-lg font-serif font-semibold text-text-primary mb-4">
+                                    Primary Interests (Select up to 3)
+                                </label>
+                                <div class="grid md:grid-cols-2 gap-3">
+                                    <label class="interest-option cursor-pointer">
+                                        <input type="checkbox" name="interests" value="history" class="sr-only" />
+                                        <div class="p-3 border-2 border-gray-200 rounded-cultural hover:border-primary transition-gentle">
+                                            <div class="flex items-center">
+                                                <svg class="h-5 w-5 text-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                                </svg>
+                                                Historical Sites & UNESCO Heritage
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="interest-option cursor-pointer">
+                                        <input type="checkbox" name="interests" value="culture" class="sr-only" />
+                                        <div class="p-3 border-2 border-gray-200 rounded-cultural hover:border-primary transition-gentle">
+                                            <div class="flex items-center">
+                                                <svg class="h-5 w-5 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                                                </svg>
+                                                Cultural Immersion & Tribal Encounters
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="interest-option cursor-pointer">
+                                        <input type="checkbox" name="interests" value="adventure" class="sr-only" />
+                                        <div class="p-3 border-2 border-gray-200 rounded-cultural hover:border-primary transition-gentle">
+                                            <div class="flex items-center">
+                                                <svg class="h-5 w-5 text-secondary mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"/>
+                                                </svg>
+                                                Adventure & Extreme Landscapes
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="interest-option cursor-pointer">
+                                        <input type="checkbox" name="interests" value="wildlife" class="sr-only" />
+                                        <div class="p-3 border-2 border-gray-200 rounded-cultural hover:border-primary transition-gentle">
+                                            <div class="flex items-center">
+                                                <svg class="h-5 w-5 text-success mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                                                </svg>
+                                                Wildlife & Nature Photography
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="w-full bg-primary hover:bg-primary-600 text-white py-4 rounded-cultural text-lg font-semibold transition-gentle">
+                                Generate My Itinerary
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Recommendations Preview -->
+                <div class="lg:col-span-1">
+                    <div class="bg-surface rounded-cultural p-6 sticky top-24">
+                        <h3 class="text-xl font-serif font-semibold text-text-primary mb-4">
+                            Your Personalized Recommendations
+                        </h3>
+                        <div id="recommendations-preview" class="space-y-4">
+                            <div class="text-text-secondary text-center py-8">
+                                <svg class="h-12 w-12 text-primary/30 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <p>Select your preferences to see personalized recommendations and pricing estimates.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Calculator Section -->
+    <section id="travel-calculator" class="planning-content hidden py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-text-primary mb-4">
+                    Transparent Travel Calculator
+                </h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                    Get detailed cost breakdowns for your Ethiopian adventure. Our calculator provides transparent pricing for all components of your journey.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Calculator Form -->
+                <div class="bg-white rounded-cultural shadow-warm-lg p-8">
+                    <h3 class="text-xl font-serif font-semibold text-text-primary mb-6">
+                        Trip Parameters
+                    </h3>
+                    <form id="cost-calculator" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-text-primary mb-2">
+                                    Number of Travelers
+                                </label>
+                                <select class="w-full p-3 border border-gray-300 rounded-cultural focus:ring-2 focus:ring-primary focus:border-transparent">
+                                    <option value="1">1 Person</option>
+                                    <option value="2" selected>2 People</option>
+                                    <option value="3">3 People</option>
+                                    <option value="4">4 People</option>
+                                    <option value="5">5+ People</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-text-primary mb-2">
+                                    Trip Duration
+                                </label>
+                                <select class="w-full p-3 border border-gray-300 rounded-cultural focus:ring-2 focus:ring-primary focus:border-transparent">
+                                    <option value="5">5 Days</option>
+                                    <option value="7">7 Days</option>
+                                    <option value="10" selected>10 Days</option>
+                                    <option value="14">14 Days</option>
+                                    <option value="21">21 Days</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-text-primary mb-2">
+                                Accommodation Level
+                            </label>
+                            <div class="grid grid-cols-3 gap-3">
+                                <label class="accommodation-level cursor-pointer">
+                                    <input type="radio" name="accommodation" value="budget" class="sr-only" />
+                                    <div class="p-3 border-2 border-gray-200 rounded-cultural text-center hover:border-primary transition-gentle">
+                                        <div class="font-medium">Budget</div>
+                                        <div class="text-xs text-text-secondary">$30-50/night</div>
+                                    </div>
+                                </label>
+                                <label class="accommodation-level cursor-pointer">
+                                    <input type="radio" name="accommodation" value="standard" class="sr-only" checked />
+                                    <div class="p-3 border-2 border-primary rounded-cultural text-center bg-primary/5">
+                                        <div class="font-medium">Standard</div>
+                                        <div class="text-xs text-text-secondary">$80-150/night</div>
+                                    </div>
+                                </label>
+                                <label class="accommodation-level cursor-pointer">
+                                    <input type="radio" name="accommodation" value="luxury" class="sr-only" />
+                                    <div class="p-3 border-2 border-gray-200 rounded-cultural text-center hover:border-primary transition-gentle">
+                                        <div class="font-medium">Luxury</div>
+                                        <div class="text-xs text-text-secondary">$200-400/night</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-text-primary mb-2">
+                                Included Services
+                            </label>
+                            <div class="space-y-3">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary" checked />
+                                    <span class="ml-3">Professional Guide Services</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary" checked />
+                                    <span class="ml-3">All Meals (Breakfast, Lunch, Dinner)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary" checked />
+                                    <span class="ml-3">Transportation & Transfers</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary" />
+                                    <span class="ml-3">Domestic Flights</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary" />
+                                    <span class="ml-3">Travel Insurance</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="button" onclick="calculateCosts()" class="w-full bg-primary hover:bg-primary-600 text-white py-3 rounded-cultural font-semibold transition-gentle">
+                            Calculate Total Cost
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Cost Breakdown -->
+                <div class="bg-white rounded-cultural shadow-warm-lg p-8">
+                    <h3 class="text-xl font-serif font-semibold text-text-primary mb-6">
+                        Cost Breakdown
+                    </h3>
+                    <div id="cost-breakdown" class="space-y-4">
+                        <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                            <span class="text-text-secondary">Accommodation (10 nights)</span>
+                            <span class="font-semibold">$1,200</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                            <span class="text-text-secondary">Professional Guide</span>
+                            <span class="font-semibold">$600</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                            <span class="text-text-secondary">All Meals</span>
+                            <span class="font-semibold">$400</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                            <span class="text-text-secondary">Transportation</span>
+                            <span class="font-semibold">$500</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                            <span class="text-text-secondary">Park Fees & Permits</span>
+                            <span class="font-semibold">$150</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                            <span class="text-text-secondary">Cultural Activities</span>
+                            <span class="font-semibold">$200</span>
+                        </div>
+                        <div class="flex justify-between items-center py-4 border-t-2 border-primary/20">
+                            <span class="text-lg font-serif font-semibold text-text-primary">Total Cost (2 people)</span>
+                            <span class="text-2xl font-bold text-primary">$3,050</span>
+                        </div>
+                        <div class="text-center text-text-secondary">
+                            <p class="text-sm">$1,525 per person</p>
+                            <p class="text-sm">$153 per person per day</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 p-4 bg-primary/5 rounded-cultural">
+                        <h4 class="font-semibold text-text-primary mb-2">What's Included:</h4>
+                        <ul class="text-sm text-text-secondary space-y-1">
+                            <li>• Expert local guide throughout your journey</li>
+                            <li>• All accommodation as selected</li>
+                            <li>• Three meals daily featuring Ethiopian cuisine</li>
+                            <li>• Private transportation and transfers</li>
+                            <li>• All entrance fees and permits</li>
+                            <li>• Cultural activities and experiences</li>
+                            <li>• 24/7 in-country support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visa Assistance Section -->
+    <section id="visa-assistance" class="planning-content hidden py-16 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-text-primary mb-4">
+                    Visa Assistance & Requirements
+                </h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                    Navigate Ethiopian visa requirements with confidence. We provide up-to-date information and direct assistance for all nationalities.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Visa Requirements -->
+                <div class="lg:col-span-2 space-y-8">
+                    <div class="bg-white rounded-cultural shadow-warm-lg p-8">
+                        <h3 class="text-xl font-serif font-semibold text-text-primary mb-6">
+                            Visa Requirements by Nationality
+                        </h3>
+                        
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium text-text-primary mb-2">
+                                Select Your Nationality
+                            </label>
+                            <select id="nationality-select" class="w-full p-3 border border-gray-300 rounded-cultural focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option value>Choose your country...</option>
+                                <option value="us">United States</option>
+                                <option value="uk">United Kingdom</option>
+                                <option value="ca">Canada</option>
+                                <option value="au">Australia</option>
+                                <option value="de">Germany</option>
+                                <option value="fr">France</option>
+                                <option value="jp">Japan</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div id="visa-info" class="hidden">
+                            <div class="bg-success/10 border border-success/20 rounded-cultural p-4 mb-6">
+                                <div class="flex items-start">
+                                    <svg class="h-5 w-5 text-success mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <div>
+                                        <h4 class="font-semibold text-success mb-1">Visa Available</h4>
+                                        <p class="text-sm text-text-secondary">Ethiopian visa is available for your nationality through multiple application methods.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="border border-gray-200 rounded-cultural p-4">
+                                    <h4 class="font-semibold text-text-primary mb-3">E-Visa (Recommended)</h4>
+                                    <ul class="text-sm text-text-secondary space-y-2">
+                                        <li class="flex items-center">
+                                            <svg class="h-4 w-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                            </svg>
+                                            Processing: 3-5 business days
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg class="h-4 w-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                            </svg>
+                                            Cost: $52 USD
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg class="h-4 w-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                            </svg>
+                                            Validity: 30 days single entry
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg class="h-4 w-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                            </svg>
+                                            Apply online before travel
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="border border-gray-200 rounded-cultural p-4">
+                                    <h4 class="font-semibold text-text-primary mb-3">Visa on Arrival</h4>
+                                    <ul class="text-sm text-text-secondary space-y-2">
+                                        <li class="flex items-center">
+                                            <svg class="h-4 w-4 text-warning mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                            </svg>
+                                            Processing: At airport
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg class="h-4 w-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                            </svg>
+                                            Cost: $52 USD
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg class="h-4 w-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                            </svg>
+                                            Validity: 30 days single entry
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg class="h-4 w-4 text-warning mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                            </svg>
+                                            Longer wait times possible
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8">
+                            <h4 class="font-semibold text-text-primary mb-4">Required Documents</h4>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <ul class="space-y-2 text-sm text-text-secondary">
+                                    <li class="flex items-center">
+                                        <svg class="h-4 w-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Passport (6+ months validity)
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="h-4 w-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Passport-sized photo
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="h-4 w-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Yellow fever certificate
+                                    </li>
+                                </ul>
+                                <ul class="space-y-2 text-sm text-text-secondary">
+                                    <li class="flex items-center">
+                                        <svg class="h-4 w-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Return flight ticket
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="h-4 w-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Hotel confirmation
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="h-4 w-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Proof of sufficient funds
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="space-y-6">
+                    <div class="bg-white rounded-cultural shadow-warm-lg p-6">
+                        <h3 class="text-lg font-serif font-semibold text-text-primary mb-4">
+                            Visa Application Links
+                        </h3>
+                        <div class="space-y-3">
+                            <a href="javascript:void(0)" class="block w-full bg-primary hover:bg-primary-600 text-white text-center py-3 rounded-cultural font-medium transition-gentle">
+                                Apply for E-Visa
+                            </a>
+                            <a href="javascript:void(0)" class="block w-full border-2 border-primary hover:bg-primary hover:text-white text-primary text-center py-3 rounded-cultural font-medium transition-gentle">
+                                Embassy Locations
+                            </a>
+                            <a href="javascript:void(0)" class="block w-full border border-gray-300 hover:bg-gray-50 text-text-primary text-center py-3 rounded-cultural font-medium transition-gentle">
+                                Download Checklist
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-accent/10 rounded-cultural p-6">
+                        <h3 class="text-lg font-serif font-semibold text-text-primary mb-4">
+                            Emmanuel Visa Assistance
+                        </h3>
+                        <p class="text-sm text-text-secondary mb-4">
+                            Let our team handle your visa application process. We provide personalized assistance and ensure all requirements are met.
+                        </p>
+                        <ul class="text-sm text-text-secondary space-y-2 mb-4">
+                            <li class="flex items-center">
+                                <svg class="h-4 w-4 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Document review & verification
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="h-4 w-4 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Application submission support
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="h-4 w-4 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Status tracking & updates
+                            </li>
+                        </ul>
+                        <a href="javascript:void(0)" class="block w-full bg-accent hover:bg-accent-600 text-white text-center py-3 rounded-cultural font-medium transition-gentle">
+                            Request Assistance
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Preparation Section -->
+    <section id="health-preparation" class="planning-content hidden py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-text-primary mb-4">
+                    Health & Medical Preparation
+                </h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                    Stay healthy and safe during your Ethiopian adventure. Our comprehensive health guide covers vaccinations, altitude preparation, and medical considerations.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Vaccinations -->
+                <div class="bg-white rounded-cultural shadow-warm-lg p-8">
+                    <h3 class="text-xl font-serif font-semibold text-text-primary mb-6">
+                        Required & Recommended Vaccinations
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-error pl-4">
+                            <h4 class="font-semibold text-error mb-2">Required Vaccinations</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-start">
+                                    <svg class="h-5 w-5 text-error mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <div>
+                                        <div class="font-medium">Yellow Fever</div>
+                                        <div class="text-sm text-text-secondary">Mandatory for entry. Certificate required at immigration.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-l-4 border-warning pl-4">
+                            <h4 class="font-semibold text-warning mb-2">Highly Recommended</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-start">
+                                    <svg class="h-5 w-5 text-warning mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <div>
+                                        <div class="font-medium">Hepatitis A & B</div>
+                                        <div class="text-sm text-text-secondary">Protection against foodborne and bloodborne infections.</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg class="h-5 w-5 text-warning mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <div>
+                                        <div class="font-medium">Typhoid</div>
+                                        <div class="text-sm text-text-secondary">Especially important for rural and cultural immersion trips.</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg class="h-5 w-5 text-warning mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <div>
+                                        <div class="font-medium">Meningitis</div>
+                                        <div class="text-sm text-text-secondary">Recommended during dry season (December-May).</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-l-4 border-primary pl-4">
+                            <h4 class="font-semibold text-primary mb-2">Consider Based on Activities</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-start">
+                                    <svg class="h-5 w-5 text-primary mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <div>
+                                        <div class="font-medium">Rabies</div>
+                                        <div class="text-sm text-text-secondary">For wildlife encounters and remote area travel.</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg class="h-5 w-5 text-primary mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <div>
+                                        <div class="font-medium">Japanese Encephalitis</div>
+                                        <div class="text-sm text-text-secondary">For extended rural stays during rainy season.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 p-4 bg-primary/5 rounded-cultural">
+                        <p class="text-sm text-text-secondary">
+                            <strong>Important:</strong> Consult with a travel medicine specialist 4-6 weeks before departure. Vaccination requirements may vary based on your travel history and current health status.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Altitude & Health Tips -->
+                <div class="space-y-8">
+                    <div class="bg-white rounded-cultural shadow-warm-lg p-8">
+                        <h3 class="text-xl font-serif font-semibold text-text-primary mb-6">
+                            Altitude Sickness Prevention
+                        </h3>
+                        
+                        <div class="mb-6">
+                            <div class="flex items-center mb-3">
+                                <svg class="h-6 w-6 text-warning mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="font-semibold">High Altitude Destinations</span>
+                            </div>
+                            <ul class="text-sm text-text-secondary space-y-1 ml-9">
+                                <li>• Addis Ababa: 2,355m (7,726ft)</li>
+                                <li>• Lalibela: 2,630m (8,628ft)</li>
+                                <li>• Simien Mountains: up to 4,550m (14,928ft)</li>
+                                <li>• Bale Mountains: up to 4,377m (14,360ft)</li>
+                            </ul>
+                        </div>
+
+                        <div class="space-y-4">
+                            <h4 class="font-semibold text-text-primary">Prevention Strategies</h4>
+                            <div class="grid gap-3">
+                                <div class="flex items-start">
+                                    <svg class="h-4 w-4 text-success mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <div class="text-sm">
+                                        <strong>Gradual Ascent:</strong> Spend 2-3 days in Addis Ababa before high-altitude destinations
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg class="h-4 w-4 text-success mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <div class="text-sm">
+                                        <strong>Stay Hydrated:</strong> Drink 3-4 liters of water daily at altitude
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg class="h-4 w-4 text-success mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <div class="text-sm">
+                                        <strong>Avoid Alcohol:</strong> Limit alcohol consumption for first 48 hours
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg class="h-4 w-4 text-success mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <div class="text-sm">
+                                        <strong>Light Activity:</strong> Take it easy for the first few days
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-cultural shadow-warm-lg p-8">
+                        <h3 class="text-xl font-serif font-semibold text-text-primary mb-6">
+                            Medical Kit Essentials
+                        </h3>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-semibold text-text-primary mb-3">Basic Medications</h4>
+                                <ul class="text-sm text-text-secondary space-y-2">
+                                    <li class="flex items-center">
+                                        <svg class="h-3 w-3 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Pain relievers (ibuprofen, acetaminophen)
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="h-3 w-3 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Anti-diarrheal medication
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="h-3 w-3 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Oral rehydration salts
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="h-3 w-3 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Antihistamines for allergies
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="h-3 w-3 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Altitude sickness medication
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-text-primary mb-3">First Aid Supplies</h4>
+                                <ul class="text-sm text-text-secondary space-y-2">
+                                    <li class="flex items-center">
+                                        <svg class="h-3 w-3 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Adhesive bandages & gauze
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="h-3 w-3 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Antiseptic wipes & cream
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="h-3 w-3 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Thermometer
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="h-3 w-3 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Insect repellent (DEET-based)
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="h-3 w-3 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Sunscreen (SPF 30+)
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packing Guide Section -->
+    <section id="packing-guide" class="planning-content hidden py-16 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-text-primary mb-4">
+                    Region-Specific Packing Guide
+                </h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                    Pack smart for Ethiopia's diverse climates and activities. Our detailed guides ensure you're prepared for every adventure.
+                </p>
+            </div>
+
+            <div class="mb-8">
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button class="packing-region-tab active px-6 py-3 rounded-cultural bg-primary text-white font-medium" data-region="general">
+                        General Essentials
+                    </button>
+                    <button class="packing-region-tab px-6 py-3 rounded-cultural bg-white text-text-primary border border-primary/20 hover:bg-primary/5 font-medium transition-gentle" data-region="highlands">
+                        Highlands
+                    </button>
+                    <button class="packing-region-tab px-6 py-3 rounded-cultural bg-white text-text-primary border border-primary/20 hover:bg-primary/5 font-medium transition-gentle" data-region="danakil">
+                        Danakil Depression
+                    </button>
+                    <button class="packing-region-tab px-6 py-3 rounded-cultural bg-white text-text-primary border border-primary/20 hover:bg-primary/5 font-medium transition-gentle" data-region="cultural">
+                        Cultural Visits
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Packing Lists -->
+                <div class="lg:col-span-2">
+                    <!-- General Essentials -->
+                    <div id="general-packing" class="packing-region-content active bg-white rounded-cultural shadow-warm-lg p-8">
+                        <h3 class="text-xl font-serif font-semibold text-text-primary mb-6">
+                            General Travel Essentials
+                        </h3>
+                        
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="font-semibold text-text-primary mb-4 flex items-center">
+                                    <svg class="h-5 w-5 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M10 2L3 7v11a2 2 0 002 2h4v-6h2v6h4a2 2 0 002-2V7l-7-5z"/>
+                                    </svg>
+                                    Clothing Basics
+                                </h4>
+                                <ul class="space-y-2 text-sm text-text-secondary">
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Lightweight, breathable shirts (3-4)
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Long pants for cultural sites (2-3)
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Comfortable walking shoes
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Light jacket or fleece
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Sun hat with brim
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Underwear & socks (7-10 days)
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-text-primary mb-4 flex items-center">
+                                    <svg class="h-5 w-5 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                    Travel Accessories
+                                </h4>
+                                <ul class="space-y-2 text-sm text-text-secondary">
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Universal power adapter
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Portable charger/power bank
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Camera with extra batteries
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Daypack for excursions
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Water bottle (reusable)
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Travel documents organizer
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 p-4 bg-primary/5 rounded-cultural">
+                            <h4 class="font-semibold text-text-primary mb-2">Packing Tips</h4>
+                            <ul class="text-sm text-text-secondary space-y-1">
+                                <li>• Pack layers for varying temperatures throughout the day</li>
+                                <li>• Choose quick-dry fabrics for easy washing</li>
+                                <li>• Leave space for souvenirs and local purchases</li>
+                                <li>• Pack essentials in carry-on in case of luggage delays</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Highlands Packing -->
+                    <div id="highlands-packing" class="packing-region-content hidden bg-white rounded-cultural shadow-warm-lg p-8">
+                        <h3 class="text-xl font-serif font-semibold text-text-primary mb-6">
+                            Ethiopian Highlands (Lalibela, Simien Mountains, Bale)
+                        </h3>
+                        
+                        <div class="mb-6 p-4 bg-warning/10 border border-warning/20 rounded-cultural">
+                            <div class="flex items-start">
+                                <svg class="h-5 w-5 text-warning mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold text-warning mb-1">Climate Alert</h4>
+                                    <p class="text-sm text-text-secondary">Temperatures can drop to 5°C (41°F) at night. Days are warm but evenings are cold.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="font-semibold text-text-primary mb-4">Cold Weather Gear</h4>
+                                <ul class="space-y-2 text-sm text-text-secondary">
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Warm jacket or down vest
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Fleece or wool sweater
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Thermal underwear
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Warm hat and gloves
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Wool socks (3-4 pairs)
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-text-primary mb-4">Trekking Equipment</h4>
+                                <ul class="space-y-2 text-sm text-text-secondary">
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Sturdy hiking boots
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Trekking poles
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Gaiters for muddy trails
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Headlamp with extra batteries
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Rain jacket and pants
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Danakil Packing -->
+                    <div id="danakil-packing" class="packing-region-content hidden bg-white rounded-cultural shadow-warm-lg p-8">
+                        <h3 class="text-xl font-serif font-semibold text-text-primary mb-6">
+                            Danakil Depression (Extreme Heat Environment)
+                        </h3>
+                        
+                        <div class="mb-6 p-4 bg-error/10 border border-error/20 rounded-cultural">
+                            <div class="flex items-start">
+                                <svg class="h-5 w-5 text-error mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold text-error mb-1">Extreme Heat Warning</h4>
+                                    <p class="text-sm text-text-secondary">Temperatures reach 50°C (122°F). Proper gear is essential for safety.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="font-semibold text-text-primary mb-4">Heat Protection</h4>
+                                <ul class="space-y-2 text-sm text-text-secondary">
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Wide-brimmed sun hat
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        UV-protective sunglasses
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        High SPF sunscreen (50+)
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Lightweight, long-sleeve shirts
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Cooling towel or bandana
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-text-primary mb-4">Specialized Gear</h4>
+                                <ul class="space-y-2 text-sm text-text-secondary">
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Insulated water bottles (2-3)
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Electrolyte supplements
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Dust mask or bandana
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Closed-toe shoes (salt protection)
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Portable shade/umbrella
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cultural Visits Packing -->
+                    <div id="cultural-packing" class="packing-region-content hidden bg-white rounded-cultural shadow-warm-lg p-8">
+                        <h3 class="text-xl font-serif font-semibold text-text-primary mb-6">
+                            Cultural Visits & Religious Sites
+                        </h3>
+                        
+                        <div class="mb-6 p-4 bg-accent/10 border border-accent/20 rounded-cultural">
+                            <div class="flex items-start">
+                                <svg class="h-5 w-5 text-accent mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold text-accent mb-1">Cultural Sensitivity</h4>
+                                    <p class="text-sm text-text-secondary">Modest dress is required for religious sites and cultural encounters.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="font-semibold text-text-primary mb-4">Modest Clothing</h4>
+                                <ul class="space-y-2 text-sm text-text-secondary">
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Long pants (no shorts)
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Long-sleeve shirts
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Scarf for head covering
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Closed-toe shoes
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Lightweight cardigan
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-text-primary mb-4">Cultural Gifts</h4>
+                                <ul class="space-y-2 text-sm text-text-secondary">
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Small gifts from your country
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Postcards or photos
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Pens or school supplies
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Instant camera film
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary mr-3" />
+                                        Small denomination bills for tips
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Packing Tips Sidebar -->
+                <div class="space-y-6">
+                    <div class="bg-white rounded-cultural shadow-warm-lg p-6">
+                        <h3 class="text-lg font-serif font-semibold text-text-primary mb-4">
+                            Smart Packing Tips
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <svg class="h-5 w-5 text-primary mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                                </svg>
+                                <div>
+                                    <h4 class="font-medium text-text-primary">Layering System</h4>
+                                    <p class="text-sm text-text-secondary">Pack versatile pieces that work together for different climates.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="h-5 w-5 text-accent mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"/>
+                                </svg>
+                                <div>
+                                    <h4 class="font-medium text-text-primary">Weight Distribution</h4>
+                                    <p class="text-sm text-text-secondary">Keep heavy items in your main luggage, essentials in carry-on.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="h-5 w-5 text-secondary mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"/>
+                                </svg>
+                                <div>
+                                    <h4 class="font-medium text-text-primary">Local Shopping</h4>
+                                    <p class="text-sm text-text-secondary">Leave space for Ethiopian textiles, coffee, and handicrafts.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-primary/5 rounded-cultural p-6">
+                        <h3 class="text-lg font-serif font-semibold text-text-primary mb-4">
+                            Download Packing Lists
+                        </h3>
+                        <div class="space-y-3">
+                            <a href="javascript:void(0)" class="block w-full bg-primary hover:bg-primary-600 text-white text-center py-3 rounded-cultural font-medium transition-gentle">
+                                Complete Packing Checklist
+                            </a>
+                            <a href="javascript:void(0)" class="block w-full border border-primary hover:bg-primary hover:text-white text-primary text-center py-3 rounded-cultural font-medium transition-gentle">
+                                Region-Specific Guides
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultural Preparation Section -->
+    <section id="cultural-preparation" class="planning-content hidden py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-text-primary mb-4">
+                    Cultural Preparation & Etiquette
+                </h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                    Enhance your Ethiopian experience through cultural understanding. Learn essential etiquette, basic phrases, and respectful practices.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Cultural Etiquette -->
+                <div class="bg-white rounded-cultural shadow-warm-lg p-8">
+                    <h3 class="text-xl font-serif font-semibold text-text-primary mb-6">
+                        Essential Ethiopian Etiquette
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-semibold text-text-primary mb-3 flex items-center">
+                                <svg class="h-5 w-5 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                                </svg>
+                                Greetings & Social Interaction
+                            </h4>
+                            <ul class="text-sm text-text-secondary space-y-2 ml-7">
+                                <li>• Handshakes are common, often with both hands</li>
+                                <li>• Shoulder bumping is a friendly greeting among acquaintances</li>
+                                <li>• Always greet elders first and with extra respect</li>
+                                <li>• Remove shoes when entering homes</li>
+                                <li>• Accept offered food or drink - refusal can be offensive</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="font-semibold text-text-primary mb-3 flex items-center">
+                                <svg class="h-5 w-5 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"/>
+                                </svg>
+                                Religious Site Etiquette
+                            </h4>
+                            <ul class="text-sm text-text-secondary space-y-2 ml-7">
+                                <li>• Dress modestly - cover shoulders, arms, and legs</li>
+                                <li>• Remove shoes before entering churches</li>
+                                <li>• Women may need to cover their heads</li>
+                                <li>• Photography may be restricted - always ask first</li>
+                                <li>• Maintain quiet, respectful behavior</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="font-semibold text-text-primary mb-3 flex items-center">
+                                <svg class="h-5 w-5 text-secondary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z"/>
+                                    <path fill-rule="evenodd" d="M3 8a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                                </svg>
+                                Dining Customs
+                            </h4>
+                            <ul class="text-sm text-text-secondary space-y-2 ml-7">
+                                <li>• Wash hands before and after meals</li>
+                                <li>• Eat with your right hand only</li>
+                                <li>• Share from communal plates (injera tradition)</li>
+                                <li>• Wait for the eldest to start eating</li>
+                                <li>• Leaving a small amount shows you're satisfied</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Basic Amharic Phrases -->
+                <div class="bg-white rounded-cultural shadow-warm-lg p-8">
+                    <h3 class="text-xl font-serif font-semibold text-text-primary mb-6">
+                        Essential Amharic Phrases
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div class="font-medium text-text-primary">English</div>
+                            <div class="font-medium text-text-primary">Amharic (Pronunciation)</div>
+                        </div>
+                        
+                        <div class="space-y-3 text-sm">
+                            <div class="grid grid-cols-2 gap-4 py-2 border-b border-gray-100">
+                                <div class="text-text-secondary">Hello</div>
+                                <div class="text-text-primary">ሰላም (Selam)</div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 py-2 border-b border-gray-100">
+                                <div class="text-text-secondary">Thank you</div>
+                                <div class="text-text-primary">አመሰግናለሁ (Ameseginalhu)</div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 py-2 border-b border-gray-100">
+                                <div class="text-text-secondary">Please</div>
+                                <div class="text-text-primary">እባክዎ (Ebakwo)</div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 py-2 border-b border-gray-100">
+                                <div class="text-text-secondary">Excuse me</div>
+                                <div class="text-text-primary">ይቅርታ (Yikirta)</div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 py-2 border-b border-gray-100">
+                                <div class="text-text-secondary">How are you?</div>
+                                <div class="text-text-primary">እንዴት ነዎት? (Endet newot?)</div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 py-2 border-b border-gray-100">
+                                <div class="text-text-secondary">I'm fine</div>
+                                <div class="text-text-primary">��ህና ነኝ (Dehna negn)</div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 py-2 border-b border-gray-100">
+                                <div class="text-text-secondary">Yes</div>
+                                <div class="text-text-primary">አዎ (Awo)</div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 py-2 border-b border-gray-100">
+                                <div class="text-text-secondary">No</div>
+                                <div class="text-text-primary">አይ (Ay)</div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 py-2 border-b border-gray-100">
+                                <div class="text-text-secondary">Water</div>
+                                <div class="text-text-primary">ውሃ (Wuha)</div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 py-2 border-b border-gray-100">
+                                <div class="text-text-secondary">Coffee</div>
+                                <div class="text-text-primary">ቡና (Buna)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 p-4 bg-accent/5 rounded-cultural">
+                        <h4 class="font-semibold text-text-primary mb-2">Language Tips</h4>
+                        <ul class="text-sm text-text-secondary space-y-1">
+                            <li>• English is widely spoken in tourist areas</li>
+                            <li>• Learning basic greetings shows respect</li>
+                            <li>• Locals appreciate any effort to speak Amharic</li>
+                            <li>• Download a translation app as backup</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Photography & Tipping Guidelines -->
+            <div class="grid lg:grid-cols-2 gap-8 mt-8">
+                <div class="bg-white rounded-cultural shadow-warm-lg p-8">
+                    <h3 class="text-xl font-serif font-semibold text-text-primary mb-6">
+                        Photography Guidelines
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <svg class="h-5 w-5 text-success mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <div>
+                                <h4 class="font-medium text-text-primary">Always Ask Permission</h4>
+                                <p class="text-sm text-text-secondary">Especially for portraits of people, even from a distance.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="h-5 w-5 text-warning mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                            </svg>
+                            <div>
+                                <h4 class="font-medium text-text-primary">Restricted Areas</h4>
+                                <p class="text-sm text-text-secondary">No photos of military, police, airports, or government buildings.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="h-5 w-5 text-primary mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z"/>
+                                <path fill-rule="evenodd" d="M3 8a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                            </svg>
+                            <div>
+                                <h4 class="font-medium text-text-primary">Small Payment Expected</h4>
+                                <p class="text-sm text-text-secondary">5-10 birr for individual portraits is customary and appreciated.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="h-5 w-5 text-accent mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                            </svg>
+                            <div>
+                                <h4 class="font-medium text-text-primary">Religious Sites</h4>
+                                <p class="text-sm text-text-secondary">Photography fees may apply. Flash is often prohibited.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-cultural shadow-warm-lg p-8">
+                    <h3 class="text-xl font-serif font-semibold text-text-primary mb-6">
+                        Tipping Guidelines
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                            <span class="font-medium text-text-primary">Tour Guide (per day)</span>
+                            <span class="text-primary font-semibold">100-200 birr</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                            <span class="font-medium text-text-primary">Driver (per day)</span>
+                            <span class="text-primary font-semibold">50-100 birr</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                            <span class="font-medium text-text-primary">Hotel Staff</span>
+                            <span class="text-primary font-semibold">10-20 birr</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                            <span class="font-medium text-text-primary">Restaurant (if no service charge)</span>
+                            <span class="text-primary font-semibold">10-15%</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                            <span class="font-medium text-text-primary">Local Guide (half day)</span>
+                            <span class="text-primary font-semibold">50-100 birr</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3">
+                            <span class="font-medium text-text-primary">Porter/Helper</span>
+                            <span class="text-primary font-semibold">20-50 birr</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 p-4 bg-primary/5 rounded-cultural">
+                        <p class="text-sm text-text-secondary">
+                            <strong>Note:</strong> Tipping is appreciated but not mandatory. Base tips on service quality and your satisfaction. USD is also accepted for tips.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking-section" class="py-20 bg-gradient-to-br from-primary/5 to-accent/5">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-text-primary mb-6">
+                Ready to Begin Your Ethiopian Adventure?
+            </h2>
+            <p class="text-xl text-text-secondary mb-8 max-w-2xl mx-auto">
+                Our expert team is ready to help you plan the perfect Ethiopian journey. From custom itineraries to group tours, we'll create an unforgettable experience.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <div class="bg-white rounded-cultural shadow-warm-md p-6">
+                    <svg class="h-12 w-12 text-primary mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                    </svg>
+                    <h3 class="text-lg font-serif font-semibold text-text-primary mb-2">Free Consultation</h3>
+                    <p class="text-sm text-text-secondary">Speak with our Ethiopia experts about your travel dreams and preferences.</p>
+                </div>
+                <div class="bg-white rounded-cultural shadow-warm-md p-6">
+                    <svg class="h-12 w-12 text-accent mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <h3 class="text-lg font-serif font-semibold text-text-primary mb-2">Custom Itinerary</h3>
+                    <p class="text-sm text-text-secondary">Receive a personalized itinerary designed specifically for your interests and timeline.</p>
+                </div>
+                <div class="bg-white rounded-cultural shadow-warm-md p-6">
+                    <svg class="h-12 w-12 text-secondary mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                    </svg>
+                    <h3 class="text-lg font-serif font-semibold text-text-primary mb-2">24/7 Support</h3>
+                    <p class="text-sm text-text-secondary">Enjoy peace of mind with our round-the-clock support throughout your journey.</p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="javascript:void(0)" class="bg-primary hover:bg-primary-600 text-white px-8 py-4 rounded-cultural text-lg font-semibold transition-gentle">
+                    Request Custom Quote
+                </a>
+                <a href="experience_collections.html" class="border-2 border-primary hover:bg-primary hover:text-white text-primary px-8 py-4 rounded-cultural text-lg font-semibold transition-gentle">
+                    Browse Ready Tours
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <svg class="h-10 w-10 text-primary" viewBox="0 0 40 40" fill="currentColor">
+                            <path d="M20 2L25 12H35L27 18L30 28L20 22L10 28L13 18L5 12H15L20 2Z"/>
+                            <circle cx="20" cy="20" r="3" fill="currentColor"/>
+                        </svg>
+                        <span class="ml-3 text-2xl font-serif font-semibold text-primary">Emmanuel Tours</span>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Your trusted guide to authentic Ethiopian experiences. We create transformative journeys that connect you with Ethiopia's rich culture, ancient history, and breathtaking landscapes.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-primary transition-gentle">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-primary transition-gentle">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-primary transition-gentle">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-primary transition-gentle">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-serif font-semibold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="homepage.html" class="text-gray-300 hover:text-primary transition-gentle">Home</a></li>
+                        <li><a href="discover_ethiopia.html" class="text-gray-300 hover:text-primary transition-gentle">Discover Ethiopia</a></li>
+                        <li><a href="experience_collections.html" class="text-gray-300 hover:text-primary transition-gentle">Experiences</a></li>
+                        <li><a href="trip_planning_center.html" class="text-gray-300 hover:text-primary transition-gentle">Plan Your Trip</a></li>
+                        <li><a href="about_emmanuel.html" class="text-gray-300 hover:text-primary transition-gentle">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-serif font-semibold mb-6">Contact Us</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <svg class="h-5 w-5 text-primary mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-300">Addis Ababa, Ethiopia<br />Bole Atlas Area</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="h-5 w-5 text-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                            </svg>
+                            <span class="text-gray-300">+251 11 123 4567</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="h-5 w-5 text-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                            <span class="text-gray-300">info@emmanueltours.et</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-300">
+                    © 2025 Emmanuel Ethiopia Tour & Travel. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Planning Tools Tab Navigation
+        const planningTabs = document.querySelectorAll('.planning-tab');
+        const planningContents = document.querySelectorAll('.planning-content');
+
+        planningTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const targetTab = tab.getAttribute('data-tab');
+                
+                // Update tab styles
+                planningTabs.forEach(t => {
+                    t.classList.remove('active', 'bg-primary', 'text-white');
+                    t.classList.add('bg-white', 'text-text-primary', 'border', 'border-primary/20');
+                });
+                tab.classList.add('active', 'bg-primary', 'text-white');
+                tab.classList.remove('bg-white', 'text-text-primary', 'border', 'border-primary/20');
+                
+                // Show/hide content
+                planningContents.forEach(content => {
+                    content.classList.add('hidden');
+                    content.classList.remove('active');
+                });
+                
+                const targetContent = document.getElementById(`${targetTab === 'itinerary' ? 'itinerary-builder' : 
+                    targetTab === 'calculator' ? 'travel-calculator' :
+                    targetTab === 'visa' ? 'visa-assistance' :
+                    targetTab === 'health' ? 'health-preparation' :
+                    targetTab === 'packing' ? 'packing-guide' :
+                    'cultural-preparation'}`);
+                
+                if (targetContent) {
+                    targetContent.classList.remove('hidden');
+                    targetContent.classList.add('active');
+                }
+            });
+        });
+
+        // Itinerary Form Interactions
+        const durationOptions = document.querySelectorAll('.duration-option');
+        const regionOptions = document.querySelectorAll('.region-option');
+        const styleOptions = document.querySelectorAll('.style-option');
+        const interestOptions = document.querySelectorAll('.interest-option');
+
+        // Duration selection
+        durationOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                durationOptions.forEach(o => {
+                    o.querySelector('div').classList.remove('border-primary', 'bg-primary/5');
+                    o.querySelector('div').classList.add('border-gray-200');
+                });
+                option.querySelector('div').classList.add('border-primary', 'bg-primary/5');
+                option.querySelector('div').classList.remove('border-gray-200');
+                option.querySelector('input').checked = true;
+            });
+        });
+
+        // Region selection (multiple)
+        regionOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                const checkbox = option.querySelector('input');
+                const div = option.querySelector('div');
+                
+                checkbox.checked = !checkbox.checked;
+                
+                if (checkbox.checked) {
+                    div.classList.add('border-primary', 'bg-primary/5');
+                    div.classList.remove('border-gray-200');
+                } else {
+                    div.classList.remove('border-primary', 'bg-primary/5');
+                    div.classList.add('border-gray-200');
+                }
+            });
+        });
+
+        // Style selection
+        styleOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                styleOptions.forEach(o => {
+                    o.querySelector('div').classList.remove('border-primary', 'bg-primary/5');
+                    o.querySelector('div').classList.add('border-gray-200');
+                });
+                option.querySelector('div').classList.add('border-primary', 'bg-primary/5');
+                option.querySelector('div').classList.remove('border-gray-200');
+                option.querySelector('input').checked = true;
+            });
+        });
+
+        // Interest selection (multiple, max 3)
+        interestOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                const checkbox = option.querySelector('input');
+                const div = option.querySelector('div');
+                const checkedInterests = document.querySelectorAll('input[name="interests"]:checked');
+                
+                if (!checkbox.checked && checkedInterests.length >= 3) {
+                    alert('Please select maximum 3 interests');
+                    return;
+                }
+                
+                checkbox.checked = !checkbox.checked;
+                
+                if (checkbox.checked) {
+                    div.classList.add('border-primary', 'bg-primary/5');
+                    div.classList.remove('border-gray-200');
+                } else {
+                    div.classList.remove('border-primary', 'bg-primary/5');
+                    div.classList.add('border-gray-200');
+                }
+            });
+        });
+
+        // Visa nationality selection
+        const nationalitySelect = document.getElementById('nationality-select');
+        const visaInfo = document.getElementById('visa-info');
+
+        if (nationalitySelect) {
+            nationalitySelect.addEventListener('change', () => {
+                if (nationalitySelect.value) {
+                    visaInfo.classList.remove('hidden');
+                } else {
+                    visaInfo.classList.add('hidden');
+                }
+            });
+        }
+
+        // Accommodation level selection
+        const accommodationLevels = document.querySelectorAll('.accommodation-level');
+        accommodationLevels.forEach(level => {
+            level.addEventListener('click', () => {
+                accommodationLevels.forEach(l => {
+                    l.querySelector('div').classList.remove('border-primary', 'bg-primary/5');
+                    l.querySelector('div').classList.add('border-gray-200');
+                });
+                level.querySelector('div').classList.add('border-primary', 'bg-primary/5');
+                level.querySelector('div').classList.remove('border-gray-200');
+                level.querySelector('input').checked = true;
+            });
+        });
+
+        // Packing region tabs
+        const packingRegionTabs = document.querySelectorAll('.packing-region-tab');
+        const packingRegionContents = document.querySelectorAll('.packing-region-content');
+
+        packingRegionTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const targetRegion = tab.getAttribute('data-region');
+                
+                // Update tab styles
+                packingRegionTabs.forEach(t => {
+                    t.classList.remove('active', 'bg-primary', 'text-white');
+                    t.classList.add('bg-white', 'text-text-primary', 'border', 'border-primary/20');
+                });
+                tab.classList.add('active', 'bg-primary', 'text-white');
+                tab.classList.remove('bg-white', 'text-text-primary', 'border', 'border-primary/20');
+                
+                // Show/hide content
+                packingRegionContents.forEach(content => {
+                    content.classList.add('hidden');
+                    content.classList.remove('active');
+                });
+                
+                const targetContent = document.getElementById(`${targetRegion}-packing`);
+                if (targetContent) {
+                    targetContent.classList.remove('hidden');
+                    targetContent.classList.add('active');
+                }
+            });
+        });
+
+        // Cost Calculator Function
+        function calculateCosts() {
+            // This would normally connect to a backend API
+            // For demo purposes, we'll just update the display
+            const breakdown = document.getElementById('cost-breakdown');
+            // Animation or update logic would go here
+            console.log('Calculating costs...');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handling
+        document.getElementById('itinerary-form')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Show recommendations (demo)
+            const preview = document.getElementById('recommendations-preview');
+            preview.innerHTML = `
+                <div class="space-y-4">
+                    <div class="p-4 bg-primary/5 rounded-cultural">
+                        <h4 class="font-semibold text-text-primary mb-2">Recommended Itinerary</h4>
+                        <p class="text-sm text-text-secondary">Based on your preferences, we recommend a ${data.duration || '10'}-day journey focusing on cultural immersion and historical sites.</p>
+                    </div>
+                    <div class="p-4 bg-accent/5 rounded-cultural">
+                        <h4 class="font-semibold text-text-primary mb-2">Estimated Cost</h4>
+                        <p class="text-lg font-bold text-primary">$2,450 per person</p>
+                        <p class="text-sm text-text-secondary">Includes accommodation, meals, guide, and transportation</p>
+                    </div>
+                    <button class="w-full bg-primary hover:bg-primary-600 text-white py-3 rounded-cultural font-medium transition-gentle">
+                        Request Detailed Quote
+                    </button>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>
